@@ -10,32 +10,482 @@
   <link rel="stylesheet" href="styles.css" />
   <title>Fresh Chicken | Fresh Animal Proteins</title>
 </head>
+
 <body>
+
   <header class="nav">
-    <a class="brand" href="#home"><img src="public/logo.jpeg" alt="Fresh Chicken logo"><span>Fresh Chicken</span></a>
-    <nav><a href="#shop">Shop</a><a href="#boxes">Fresh Boxes</a><a href="#how">How it works</a><button id="accountBtn">Account</button><button id="cartBtn">Cart <b id="cartCount">0</b></button></nav>
+    <a class="brand" href="#home">
+      <img src="public/logo.jpeg" alt="Fresh Chicken logo">
+      <span>Fresh Chicken</span>
+    </a>
+
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#boxes">Fresh Boxes</a>
+      <a href="#how">How it works</a>
+      <button id="accountBtn">Account</button>
+      <button id="cartBtn">Cart <b id="cartCount">0</b></button>
+    </nav>
   </header>
 
+
   <main>
+
     <section id="home" class="hero">
-      <div><span class="eyebrow">FRESH • CLEAN • CONVENIENT</span><h1>Fresh proteins,<br><em>delivered your way.</em></h1><p>Chicken, tilapia, sausage, gizzard and custom Fresh Boxes — delivered same day around UCC.</p><div class="actions"><a class="btn primary" href="#shop">Shop now</a><a class="btn ghost" href="#boxes">Build a Fresh Box</a></div><div class="trust"><span>🚚 GH₵5 UCC delivery</span><span>⚡ Same-day delivery</span><span>📅 Scheduled delivery</span></div></div>
-      <div class="hero-card"><img src="public/logo.jpeg" alt="Fresh Chicken"><div class="hero-badge">🐔 Fresh Chicken</div></div>
+
+      <div>
+        <span class="eyebrow">FRESH • CLEAN • CONVENIENT</span>
+
+        <h1>
+          Fresh proteins,<br>
+          <em>delivered your way.</em>
+        </h1>
+
+        <p>
+          Chicken, tilapia, sausage, gizzard and custom Fresh Boxes —
+          delivered same day around UCC.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="#shop">Shop now</a>
+          <a class="btn ghost" href="#boxes">Build a Fresh Box</a>
+        </div>
+
+        <div class="trust">
+          <span>🚚 GH₵5 UCC delivery</span>
+          <span>⚡ Same-day delivery</span>
+          <span>📅 Scheduled delivery</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <img src="public/logo.jpeg" alt="Fresh Chicken">
+        <div class="hero-badge">🐔 Fresh Chicken</div>
+      </div>
+
     </section>
 
-    <section id="shop" class="section"><div class="section-head"><div><span class="eyebrow">SHOP</span><h2>Pick your proteins</h2></div><div class="filters"><button class="filter active" data-cat="all">All</button><button class="filter" data-cat="Chicken">Chicken</button><button class="filter" data-cat="Fish">Fish</button><button class="filter" data-cat="Extras">Extras</button></div></div><div id="products" class="grid"></div></section>
 
-    <section id="boxes" class="section alt"><div class="section-head"><div><span class="eyebrow">FRESH BOX</span><h2>Build your own & save GH₵10</h2><p>Select any products below. The website calculates the original total and automatically takes GH₵10 off.</p></div></div><div class="box-builder"><div id="builderItems"></div><div class="summary"><span>Original total</span><b id="boxOriginal">GH₵0</b><span class="save">Fresh Box discount</span><b class="save" id="boxDiscount">- GH₵10</b><hr><span>Fresh Box price</span><strong id="boxTotal">GH₵0</strong><button class="btn primary" id="addBox">Add Fresh Box to cart</button></div></div><div id="fixedBoxes" class="grid boxes"></div></section>
+    <section id="shop" class="section">
 
-    <section id="how" class="section"><div class="section-head"><div><span class="eyebrow">HOW IT WORKS</span><h2>Simple from click to doorstep.</h2></div></div><div class="steps"><article><span>01</span><h3>Choose</h3><p>Select your proteins or build a Fresh Box.</p></article><article><span>02</span><h3>Checkout</h3><p>Enter your name, phone and UCC delivery details.</p></article><article><span>03</span><h3>Choose delivery</h3><p>Same day, or schedule ahead. Scheduled orders are paid after placing the order.</p></article><article><span>04</span><h3>Receive</h3><p>We confirm your order and deliver it to you.</p></article></div></section>
+      <div class="section-head">
+
+        <div>
+          <span class="eyebrow">SHOP</span>
+          <h2>Pick your proteins</h2>
+        </div>
+
+        <div class="filters">
+          <button class="filter active" data-cat="all">All</button>
+          <button class="filter" data-cat="Chicken">Chicken</button>
+          <button class="filter" data-cat="Fish">Fish</button>
+          <button class="filter" data-cat="Extras">Extras</button>
+        </div>
+
+      </div>
+
+      <div id="products" class="grid"></div>
+
+    </section>
+
+
+    <section id="boxes" class="section alt">
+
+      <div class="section-head">
+
+        <div>
+          <span class="eyebrow">FRESH BOX</span>
+
+          <h2>Build your own & save GH₵10</h2>
+
+          <p>
+            Select any products below. The website calculates the
+            original total and automatically takes GH₵10 off.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="box-builder">
+
+        <div id="builderItems"></div>
+
+        <div class="summary">
+
+          <span>Original total</span>
+          <b id="boxOriginal">GH₵0</b>
+
+          <span class="save">Fresh Box discount</span>
+          <b class="save" id="boxDiscount">- GH₵10</b>
+
+          <hr>
+
+          <span>Fresh Box price</span>
+          <strong id="boxTotal">GH₵0</strong>
+
+          <button class="btn primary" id="addBox">
+            Add Fresh Box to cart
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div id="fixedBoxes" class="grid boxes"></div>
+
+    </section>
+
+
+    <section id="how" class="section">
+
+      <div class="section-head">
+
+        <div>
+          <span class="eyebrow">HOW IT WORKS</span>
+          <h2>Simple from click to doorstep.</h2>
+        </div>
+
+      </div>
+
+
+      <div class="steps">
+
+        <article>
+          <span>01</span>
+          <h3>Choose</h3>
+          <p>Select your proteins or build a Fresh Box.</p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Checkout</h3>
+          <p>Enter your name, phone and UCC delivery details.</p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Choose delivery</h3>
+          <p>
+            Same day, or schedule ahead.
+            Scheduled orders are paid after placing the order.
+          </p>
+        </article>
+
+        <article>
+          <span>04</span>
+          <h3>Receive</h3>
+          <p>We confirm your order and deliver it to you.</p>
+        </article>
+
+      </div>
+
+    </section>
+
   </main>
 
-  <aside id="cartPanel" class="drawer"><div class="drawer-head"><h2>Your cart</h2><button id="closeCart">×</button></div><div id="cartItems"></div><div class="drawer-foot"><div><span>Subtotal</span><strong id="cartTotal">GH₵0</strong></div><button class="btn primary" id="checkoutBtn">Checkout</button></div></aside><div id="backdrop" class="backdrop"></div>
 
-  <div id="checkoutModal" class="modal"><div class="modal-card"><button class="modal-close" id="closeCheckout">×</button><span class="eyebrow">CHECKOUT</span><h2>Complete your order</h2><form id="checkoutForm"><label>Full name<input id="name" required></label><label>Phone number<input id="phone" inputmode="tel" placeholder="0552509943" required></label><label>Delivery location<select id="location" required><option value="">Select location</option><option>Atlantic Hall</option><option>Oguaa Hall</option><option>Adehye Hall</option><option>Valco Hall</option><option>Casely Hayford Hall</option><option>Science Market</option><option>Amamoma</option><option>Other UCC location</option></select></label><label>Room / landmark<input id="landmark" placeholder="Room, hostel or landmark"></label><div class="choice"><span>Delivery</span><label><input type="radio" name="delivery" value="same-day" checked> Same day — GH₵5</label><label><input type="radio" name="delivery" value="scheduled"> Schedule delivery</label></div><div id="scheduleFields" class="schedule hidden"><label>Date<input type="date" id="date"></label><label>Time<select id="time"><option>10:00 AM</option><option>12:00 PM</option><option>2:00 PM</option><option>4:00 PM</option><option>6:00 PM</option></select></label></div><div class="choice"><span>Payment</span><label><input type="radio" name="payment" value="momo" checked> MTN MoMo</label><label><input type="radio" name="payment" value="after"> Pay after placing order</label></div><p id="paymentNote" class="notice">MTN MoMo: <b>0547864825</b> — Faith Kwasi Nyarko</p><div class="checkout-total"><span>Total</span><strong id="checkoutTotal">GH₵0</strong></div><button class="btn primary full" type="submit">Confirm order</button></form></div></div>
+  <!-- CART -->
 
-  <div id="successModal" class="modal"><div class="modal-card center"><div class="success-icon">✓</div><span class="eyebrow">ORDER RECEIVED</span><h2 id="successTitle">Order FC-00001</h2><p id="successText"></p><div class="actions"><a id="waLink" class="btn primary" target="_blank">Send order on WhatsApp</a><button class="btn ghost" id="doneBtn">Done</button></div></div></div>
+  <aside id="cartPanel" class="drawer">
 
-  <footer><div><img src="public/logo.jpeg" alt="Fresh Chicken logo"><p>Fresh animal proteins, made easy.</p></div><div><b>Contact</b><a href="tel:0552509943">0552509943</a><a href="tel:0539288463">0539288463</a><a href="sms:0552509943">SMS us</a></div><div><b>Payment</b><span>MTN MoMo</span><span>0547864825</span><span>Faith Kwasi Nyarko</span></div></footer>
+    <div class="drawer-head">
+      <h2>Your cart</h2>
+      <button id="closeCart">×</button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="drawer-foot">
+
+      <div>
+        <span>Subtotal</span>
+        <strong id="cartTotal">GH₵0</strong>
+      </div>
+
+      <button class="btn primary" id="checkoutBtn">
+        Checkout
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <div id="backdrop" class="backdrop"></div>
+
+
+  <!-- CHECKOUT -->
+
+  <div id="checkoutModal" class="modal">
+
+    <div class="modal-card">
+
+      <button class="modal-close" id="closeCheckout">×</button>
+
+      <span class="eyebrow">CHECKOUT</span>
+
+      <h2>Complete your order</h2>
+
+
+      <form id="checkoutForm">
+
+        <label>
+          Full name
+          <input id="name" required>
+        </label>
+
+
+        <label>
+          Phone number
+          <input
+            id="phone"
+            inputmode="tel"
+            placeholder="0552509943"
+            required
+          >
+        </label>
+
+
+        <label>
+          Delivery location
+
+          <select id="location" required>
+
+            <option value="">Select location</option>
+
+            <option>Atlantic Hall</option>
+            <option>Oguaa Hall</option>
+            <option>Adehye Hall</option>
+            <option>Valco Hall</option>
+            <option>Casely Hayford Hall</option>
+            <option>Science Market</option>
+            <option>Amamoma</option>
+            <option>Other UCC location</option>
+
+          </select>
+
+        </label>
+
+
+        <label>
+          Room / landmark
+          <input
+            id="landmark"
+            placeholder="Room, hostel or landmark"
+          >
+        </label>
+
+
+        <div class="choice">
+
+          <span>Delivery</span>
+
+          <label>
+            <input
+              type="radio"
+              name="delivery"
+              value="same-day"
+              checked
+            >
+            Same day — GH₵5
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="delivery"
+              value="scheduled"
+            >
+            Schedule delivery
+          </label>
+
+        </div>
+
+
+        <div id="scheduleFields" class="schedule hidden">
+
+          <label>
+            Date
+            <input type="date" id="date">
+          </label>
+
+          <label>
+            Time
+
+            <select id="time">
+
+              <option>10:00 AM</option>
+              <option>12:00 PM</option>
+              <option>2:00 PM</option>
+              <option>4:00 PM</option>
+              <option>6:00 PM</option>
+
+            </select>
+
+          </label>
+
+        </div>
+
+
+        <div class="choice">
+
+          <span>Payment</span>
+
+          <label>
+            <input
+              type="radio"
+              name="payment"
+              value="momo"
+              checked
+            >
+            MTN MoMo
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="payment"
+              value="after"
+            >
+            Pay after placing order
+          </label>
+
+        </div>
+
+
+        <p id="paymentNote" class="notice">
+          MTN MoMo:
+          <b>0547864825</b>
+          — Faith Kwasi Nyarko
+        </p>
+
+
+        <div class="checkout-total">
+
+          <span>Total</span>
+          <strong id="checkoutTotal">GH₵0</strong>
+
+        </div>
+
+
+        <!-- ANIMATED CONFIRM ORDER BUTTON -->
+
+        <button
+          class="btn primary full order-button"
+          type="submit"
+        >
+
+          <span class="button-text">
+            Confirm order
+          </span>
+
+          <span class="delivery-animation">
+
+            <span class="package">📦</span>
+
+            <span class="truck">🚚</span>
+
+          </span>
+
+        </button>
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- SUCCESS -->
+
+  <div id="successModal" class="modal">
+
+    <div class="modal-card center">
+
+      <div class="success-icon">✓</div>
+
+      <span class="eyebrow">ORDER RECEIVED</span>
+
+      <h2 id="successTitle">
+        Order FC-00001
+      </h2>
+
+      <p id="successText"></p>
+
+      <div class="actions">
+
+        <a
+          id="waLink"
+          class="btn primary"
+          target="_blank"
+        >
+          Send order on WhatsApp
+        </a>
+
+        <button
+          class="btn ghost"
+          id="doneBtn"
+        >
+          Done
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div>
+
+      <img
+        src="public/logo.jpeg"
+        alt="Fresh Chicken logo"
+      >
+
+      <p>
+        Fresh animal proteins, made easy.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <b>Contact</b>
+
+      <a href="tel:0552509943">0552509943</a>
+      <a href="tel:0539288463">0539288463</a>
+      <a href="sms:0552509943">SMS us</a>
+
+    </div>
+
+
+    <div>
+
+      <b>Payment</b>
+
+      <span>MTN MoMo</span>
+      <span>0547864825</span>
+      <span>Faith Kwasi Nyarko</span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- SCRIPTS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
   <script src="app.js"></script>
+
 </body>
 </html>
