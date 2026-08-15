@@ -169,7 +169,7 @@ function renderProducts(category = 'all') {
       (product) => `
         <article class="card">
 
-          <difunction add(v class="product-img">
+          <div class="product-img">
   ${product.emoji}
 </div>
 
