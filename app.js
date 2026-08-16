@@ -133,6 +133,26 @@ function save() {
 
   renderCart();
 }
+function flashAdded(button) {
+  if (!button) return;
+
+  const originalText = button.textContent;
+
+  button.textContent = 'Added ✓';
+  button.classList.add('added');
+
+  setTimeout(() => {
+    button.textContent = originalText;
+    button.classList.remove('added');
+  }, 900);
+
+  const badge = $('#cartCount');
+  badge.classList.remove('pulse');
+
+  void badge.offsetWidth;
+
+  badge.classList.add('pulse');
+}
 
 
 function add(item) {
@@ -255,8 +275,10 @@ function renderProducts(category = 'all') {
           option: option[0],
           price: option[1]
         });
+
+        flashAdded(button);
       };
-    });
+    }); 
 }
 
 
@@ -446,6 +468,8 @@ function renderFixedBoxes() {
           option: 'Fixed Combo',
           price: box.price
         });
+
+        flashAdded(button);
       };
 
     });
@@ -1097,6 +1121,8 @@ $('#addBox').onclick = () => {
     price:
       box.total
   });
+
+  flashAdded($('#addBox'));
 };
 
 

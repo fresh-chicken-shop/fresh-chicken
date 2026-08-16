@@ -163,6 +163,31 @@ h1 em{
   border:1px solid var(--line);
 }
 
+/* ---------- FROST BUTTON ---------- */
+
+.btn-frost{
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow:
+    0 8px 24px rgba(143, 16, 22, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  color: var(--ink);
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+
+.btn-frost:hover{
+  background: rgba(255, 255, 255, 0.32);
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 30px rgba(143, 16, 22, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
 .trust{
   display:flex;
   gap:18px;
@@ -747,43 +772,37 @@ footer b{
 @keyframes load-package{
 
   0%{
-    left:-20px;
+    left:-90px;
     bottom:18px;
     transform:scale(0.7);
   }
 
   15%{
-    left:15%;
+    left:calc(15% - 30px);
     bottom:18px;
     transform:scale(0.8);
   }
 
-  30%{
-    left:34%;
-    bottom:24px;
-    transform:scale(1);
+  35%{
+    left:calc(40% - 30px);
+    bottom:22px;
+    transform:scale(0.9);
   }
 
-  45%{
-    left:48%;
-    bottom:24px;
-    transform:scale(1);
-  }
-
-  60%{
-    left:61%;
+  55%{
+    left:calc(60% - 30px);
     bottom:20px;
     transform:scale(0.9);
   }
 
   75%{
-    left:80%;
+    left:calc(82% - 30px);
     bottom:20px;
     transform:scale(0.8);
   }
 
   100%{
-    left:calc(100% + 30px);
+    left:calc(100% + 20px);
     bottom:18px;
     transform:scale(0.7);
   }
@@ -794,6 +813,11 @@ footer b{
 
 .order-button.is-animating{
   cursor:wait;
+}
+
+.order-button .truck-icon{
+  display:inline-block;
+  transform:scaleX(-1);
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -893,4 +917,33 @@ footer b{
     grid-template-columns:1fr;
   }
 
+}
+
+/* ---------- ADD TO CART FEEDBACK ---------- */
+
+.btn.added{
+  background:var(--green)!important;
+  pointer-events:none;
+}
+
+@keyframes badge-pulse{
+  0%{
+    transform:scale(1);
+  }
+
+  30%{
+    transform:scale(1.35);
+  }
+
+  60%{
+    transform:scale(0.9);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+}
+
+.nav b.pulse{
+  animation:badge-pulse 0.4s ease;
 }
